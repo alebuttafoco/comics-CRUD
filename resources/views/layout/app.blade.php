@@ -9,6 +9,7 @@
         <nav>
             <a href=" {{route('home')}} "> Home </a>
             <a href=" {{route('comics.index')}} "> Comics </a>
+            <a href=" {{route('comics.create')}} "> Create </a>
         </nav>
     </header>
 
