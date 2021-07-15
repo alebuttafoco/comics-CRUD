@@ -2,7 +2,10 @@
 @section('content')
 
 
-<h1>HOME PAGE</h1>
+  {{-- title --}}
+  <div class="section_title">
+    <h1 class="container">HOME</h1>
+</div>
 
 
 @endsection
