@@ -2,8 +2,13 @@
 @section('content')
 
 <div class="comics_create">
-    <h1>CREATE NEW COMIC</h1>
-     <div class="container">
+    {{-- title --}}
+    <div class="section_title">
+        <h1 class="container">CREATE NEW COMIC</h1>
+    </div>
+
+
+     <div class="container-sm">
  
         {{-- FORM --}}
         <form action=" {{route('comics.store')}} " method="POST">
@@ -24,12 +29,6 @@
             <div class="form-group">
                 <label for="description">Descrizione</label>
                 <textarea name="description" id="description" cols="30" rows="10" placeholder="inserisci la descrizione"></textarea>
-            </div>
-
-            {{-- year --}}
-            <div class="form-group">
-                <label for="year">Anno</label>
-                <input type="number" name="year" id="year" class="form-control" placeholder="inserisci l'anno">
             </div>
 
             {{-- price --}}

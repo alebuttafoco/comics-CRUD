@@ -2,8 +2,12 @@
 @section('content')
 
 <div class="comics_edit">
-    <h1>EDIT COMIC</h1>
-     <div class="container">
+     {{-- title --}}
+     <div class="section_title">
+        <h1 class="container">EDIT COMIC</h1>
+    </div>
+
+    <div class="container-sm">
  
         {{-- FORM --}}
         <form action=" {{route('comics.update', $comic->id)}} " method="POST">
@@ -27,12 +31,6 @@
             <div class="form-group">
                 <label for="description">Descrizione</label>
                 <textarea name="description" id="description" cols="30" rows="10" >{{$comic->description}}</textarea>
-            </div>
-
-            {{-- year --}}
-            <div class="form-group">
-                <label for="year">Anno</label>
-                <input type="number" name="year" id="year" class="form-control" value="{{$comic->year}}">
             </div>
 
             {{-- price --}}
