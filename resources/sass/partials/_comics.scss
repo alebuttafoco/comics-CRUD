@@ -1,13 +1,25 @@
 .comics{
-
+    
     .cards{
+        padding: 50px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
 
         .card{
-            width: 150px;
-            margin: 50px;
+            margin: 20px;
+            
+            img {
+                width: 250px;
+                position: relative;
+                box-shadow: $shadow;
+                transition:.3s;
+                
+                &:hover{
+                    padding: 5px;
+                    border: 5px solid $primary_color;
+                }
+            }
         }
     }
 }

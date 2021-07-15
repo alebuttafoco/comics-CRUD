@@ -6,18 +6,30 @@
   margin: 0;
 }
 
+.u-center {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   font-family: "Kanit", sans-serif;
+  background-color: #353535;
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
 a {
   text-decoration: none;
-  padding: 15px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+a:not(:last-child) {
+  margin-right: 50px;
 }
 
 .form-group {
@@ -45,17 +57,43 @@ button {
 button:hover {
   cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 5px 5px gray;
+  box-shadow: 1px 5px 10px #222222;
+}
+
+.section_title {
+  background-color: #222222;
+  color: #fff;
+  padding: 15px 0;
+}
+
+header {
+  background-color: #4087dd;
+}
+
+nav {
+  padding: 20px 0;
 }
 
 .comics .cards {
+  padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .comics .cards .card {
-  width: 150px;
-  margin: 50px;
+  margin: 20px;
+}
+
+.comics .cards .card img {
+  width: 250px;
+  position: relative;
+  box-shadow: 1px 5px 10px #222222;
+  transition: 0.3s;
+}
+
+.comics .cards .card img:hover {
+  padding: 5px;
+  border: 5px solid #4087dd;
 }
 
