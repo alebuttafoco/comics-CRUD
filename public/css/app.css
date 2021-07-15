@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@300;
 
-700&display=swap);* {
+700&display=swap);.delete {
+  background-color: #b82525;
+}
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -9,6 +13,10 @@
 .u-center {
   display: flex;
   justify-content: center;
+}
+
+.m-t {
+  margin-top: 30px;
 }
 
 body {
@@ -55,14 +63,15 @@ button {
   height: 50px;
   background-color: #4087dd;
   color: #fff;
-  border-radius: 25px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
   border-style: none;
+  transition: 0.3s;
 }
 
 button:hover {
   cursor: pointer;
-  transform: translateY(-5px);
-  box-shadow: 1px 5px 10px #222222;
+  transform: translateX(10px);
 }
 
 .section_title {
@@ -105,6 +114,7 @@ nav {
 .comic {
   margin-top: 10%;
   background-color: #fff;
+  position: relative;
   display: flex;
 }
 
@@ -144,5 +154,12 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 50px;
+}
+
+.comic .buttons {
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  transform: translateY(-50%);
 }
 

@@ -1,7 +1,7 @@
 .comic {
     margin-top: 10%;
     background-color: $second_color;
-
+    position: relative;
     display: flex;
 
     .path {
@@ -40,5 +40,13 @@
             font-weight: 700;
             margin-top: 50px;
         }
+
+    }
+
+    .buttons {
+        position: absolute;
+        top: 50%;
+        right: -120px;
+        transform: translateY(-50%);
     }
 }

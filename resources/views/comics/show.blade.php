@@ -14,14 +14,18 @@
         <span class="price"> {{$comic->price}} € </span>
     </div>
         
-        {{-- <form action=" {{route('comics.destroy', $comic->id)}} " method="post">
+    <div class="buttons">
+
+        <form action=" {{route('comics.destroy', $comic->id)}} " method="post">
             @csrf
             @method('DELETE')
             
-            <button type="submit">Delete</button>
+            <button class="delete" type="submit">Delete</button>
         </form>
 
-        <a href=" {{route('comics.edit', $comic->id)}} "><button>Edit</button></a> --}}
+        <a href=" {{route('comics.edit', $comic->id)}} "><button class="m-t">Edit</button></a>
+
+    </div>
     
 </div>
 

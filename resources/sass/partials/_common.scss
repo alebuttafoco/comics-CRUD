@@ -10,6 +10,10 @@
     justify-content: center;
 }
 
+.m-t{
+    margin-top: 30px;
+}
+
 body {
     font-family: 'Kanit', sans-serif;
     background-color: $dark_color;
@@ -54,13 +58,14 @@ button{
     height: 50px;
     background-color: $primary_color;
     color: $second_color;
-    border-radius: 25px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
     border-style: none;
+    transition: .3s;
 
     &:hover{
         cursor: pointer;
-        transform: translateY(-5px);
-        box-shadow: $shadow;
+        transform: translateX(10px);
     }
 }
 
