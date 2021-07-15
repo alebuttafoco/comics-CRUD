@@ -36,15 +36,13 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        $newComic = new Comic;
-        $newComic->path = $data->path;
-        $newComic->title = $data->title;
-        $newComic->description = $data->description;
-        $newComic->year = $data->year;
-        $newComic->vote = $data->vote;
-        $newComic->price = $data->price;
+        //dd($request->request);
+        $newComic = new Comic();
+        $newComic->path = $request->path;
+        $newComic->title = $request->title;
+        $newComic->description = $request->description;
+        $newComic->year = $request->year;
+        $newComic->price = $request->price;
         $newComic->save(); //IMPORTANTE
 
         return redirect()->route('comics.index'); // ritorna alla pagina principale di comics
@@ -69,7 +67,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -81,7 +79,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        //dd($request->request);
+        $comic->update($request->all());
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -92,6 +92,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
