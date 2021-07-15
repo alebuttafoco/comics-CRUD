@@ -2,22 +2,23 @@
 @section('content')
 
 <div class="comics">
-    <div class="container">
-        {{-- title --}}
-        <h1>COMICS</h1>
-    
-        {{-- cards --}}
-        <div class="cards">
-    
-            {{-- card --}}
-            @foreach ($comics as $comic)
-            <div class="card">
-                <a href=" {{route('comics.show', $comic->id)}} "><img src=" {{$comic->path}} " alt=""></a>
-            </div>
-            @endforeach
-    
-        </div>
+
+    {{-- title --}}
+    <div class="section_title">
+        <h1 class="container">COMICS</h1>
     </div>
+    
+    {{-- cards --}}
+    <div class="cards container">
+        
+        {{-- card --}}
+        @foreach ($comics as $comic)
+        <div class="card">
+            <a href=" {{route('comics.show', $comic->id)}} "><img src=" {{$comic->path}} " alt=""></a>
+        </div>
+        @endforeach
+    </div>
+    
 
 </div>
 
