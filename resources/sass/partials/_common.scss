@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     background-color: $dark_color;
 }
 
@@ -67,6 +67,10 @@ button{
         cursor: pointer;
         transform: translateX(10px);
     }
+}
+input{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
 }
 
 // SECTION TITLE
