@@ -1,0 +1,44 @@
+.comic {
+    margin-top: 10%;
+    background-color: $second_color;
+
+    display: flex;
+
+    .path {
+        height: 600px;
+
+        img {
+            width: 350px;
+            position: relative;
+            top: -30px;
+            left: -30px;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 70px;
+        padding-bottom: 20px;
+
+        .comic_title {
+            margin-bottom: 20px;
+        }
+
+        .description{
+            line-height: 2rem;
+        }
+
+        .price {
+            background-color: lightseagreen;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 50px;
+        }
+    }
+}

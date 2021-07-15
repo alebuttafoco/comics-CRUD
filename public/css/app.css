@@ -21,6 +21,11 @@ body {
   margin: auto;
 }
 
+.container-sm {
+  width: 50%;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -95,5 +100,49 @@ nav {
 .comics .cards .card img:hover {
   padding: 5px;
   border: 5px solid #4087dd;
+}
+
+.comic {
+  margin-top: 10%;
+  background-color: #fff;
+  display: flex;
+}
+
+.comic .path {
+  height: 600px;
+}
+
+.comic .path img {
+  width: 350px;
+  position: relative;
+  top: -30px;
+  left: -30px;
+}
+
+.comic .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 70px;
+  padding-bottom: 20px;
+}
+
+.comic .details .comic_title {
+  margin-bottom: 20px;
+}
+
+.comic .details .description {
+  line-height: 2rem;
+}
+
+.comic .details .price {
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 50px;
 }
 
