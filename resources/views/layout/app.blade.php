@@ -8,7 +8,7 @@
         {{-- site nav --}}
         <nav>
             <a href=" {{route('home')}} "> Home </a>
-            <a href=" {{route('comics.index')}} "> All Comics </a>
+            <a href=" {{route('comics.index')}} "> Comics </a>
         </nav>
     </header>
 
