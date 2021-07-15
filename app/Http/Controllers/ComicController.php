@@ -41,7 +41,6 @@ class ComicController extends Controller
         $newComic->path = $request->path;
         $newComic->title = $request->title;
         $newComic->description = $request->description;
-        $newComic->year = $request->year;
         $newComic->price = $request->price;
         $newComic->save(); //IMPORTANTE
 
