@@ -1,0 +1,13 @@
+.comics{
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .card{
+            width: 150px;
+            margin: 50px;
+        }
+    }
+}

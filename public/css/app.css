@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  padding: 15px;
+}
+
+.comics .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.comics .cards .card {
+  width: 150px;
+  margin: 50px;
+}
+
