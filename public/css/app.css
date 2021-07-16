@@ -77,6 +77,22 @@ a:not(:last-child) {
   background-color: #0282f9;
 }
 
+.fa-plus {
+  padding: 15px 17px;
+  border-radius: 50%;
+  background-color: #0282f9;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-animation: show 1s linear;
+          animation: show 1s linear;
+}
+
+.fa-plus:hover {
+  transform: scale(1.05);
+  background-color: #0269c9;
+}
+
 .form-group {
   margin: 30px 0;
   font-size: 1.5rem;
@@ -174,6 +190,26 @@ input {
 
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
   }
 }

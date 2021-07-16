@@ -3,13 +3,14 @@
 @section('content')
 
 <div class="admin">
-
+  
   {{-- title --}}
   <div class="section_title">
     <h1 class="container">ADMIN</h1>
   </div>
-
+  
   <div class="container">
+    <a href=" {{route('comics.create')}} " class="{{Route::currentRouteName() == 'comics.create' ? 'active_link' : ''}}"> <i class="fas fa-plus"></i> </a>
 
     <table>
 

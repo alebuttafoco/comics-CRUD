@@ -70,6 +70,22 @@ a{
     background-color: $primary_color;
 }
 
+.fa-plus {
+    padding: 15px 17px;
+    border-radius: 50%;
+    background-color: $primary_color;
+    position:fixed;
+    bottom: 30px;
+    right: 30px;
+    animation: show 1s linear;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #0269c9;
+
+    }
+}
+
 // form and button
 .form-group{
     margin: 30px 0;
