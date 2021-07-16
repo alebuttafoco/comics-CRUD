@@ -17,7 +17,7 @@
         
     <div class="buttons">
 
-        <form action=" {{route('comics.destroy', $comic->id)}} " method="post">
+        <form onclick="return confirm('Sei sicuro di voler eliminare questo elemento?')" action=" {{route('comics.destroy', $comic->id)}} " method="post">
             @csrf
             @method('DELETE')
             
