@@ -33,7 +33,7 @@
             {{-- title --}}
             <div class="form-group">
                 <label for="title">Titolo</label>
-                <input type="text" name="title" id="title" class="form-control" placeholder="inserisci il titolo">
+                <input type="text" name="title" id="title" class="form-control" placeholder="inserisci il titolo" required min="3" max="100">
             </div>
             {{-- ----------------------------------------------------------------------------------------------------------------
             MOSTRA ERRORE 

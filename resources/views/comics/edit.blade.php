@@ -25,8 +25,17 @@
             {{-- title --}}
             <div class="form-group">
                 <label for="title">Titolo</label>
-                <input type="text" name="title" id="title" class="form-control" value=" {{$comic->title}}">
+                <input type="text" name="title" id="title" class="form-control" value=" {{$comic->title}}" required min="3" max="100">
             </div>
+            {{-- ----------------------------------------------------------------------------------------------------------------
+            MOSTRA ERRORE 
+            ----------------------------------------------------------------------------------------------------------------------}}
+            @error('title')
+            <div class="alert alert-danger"><i class="fas fa-arrow-alt-circle-up alert-danger"></i> {{ $message }}</div>
+            @enderror
+            {{-- ----------------------------------------------------------------------------------------------------------------
+            / MOSTRA ERRORE 
+            ----------------------------------------------------------------------------------------------------------------------}}
 
             {{-- description --}}
             <div class="form-group">
