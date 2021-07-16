@@ -81,6 +81,9 @@ input {
   background-color: #222222;
   color: #fff;
   padding: 15px 0;
+  position: sticky;
+  top: 76px;
+  z-index: 1;
 }
 
 .alert {

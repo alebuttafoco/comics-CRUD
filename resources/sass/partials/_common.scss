@@ -78,6 +78,9 @@ input{
     background-color: $darker_color;
     color: $second_color;
     padding: 15px 0;
+    position:sticky;
+    top: 76px;
+    z-index: 1;
 }
 
 // ALERT ERRORS
