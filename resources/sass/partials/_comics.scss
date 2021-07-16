@@ -5,6 +5,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        animation: slide_left .7s linear;
+
+        // animation
+
         
         .card{
             margin: 15px;
