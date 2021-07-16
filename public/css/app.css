@@ -106,6 +106,54 @@ input {
   margin-right: 15px;
 }
 
+@-webkit-keyframes slide_top {
+  from {
+    transform: translateY(-1100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_top {
+  from {
+    transform: translateY(-1100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide_left {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_left {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 header {
   background-color: #4087dd;
   position: sticky;
@@ -131,6 +179,8 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  -webkit-animation: slide_left 0.7s linear;
+          animation: slide_left 0.7s linear;
 }
 
 .comics .cards .card {
@@ -205,28 +255,8 @@ nav a:hover {
 .comics_edit {
   z-index: -1;
   color: #4087dd;
-  -webkit-animation: slide 0.5s ease-in;
-          animation: slide 0.5s ease-in;
-}
-
-@-webkit-keyframes slide {
-  from {
-    transform: translateY(-1100px);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide {
-  from {
-    transform: translateY(-1100px);
-  }
-
-  to {
-    transform: translateY(0);
-  }
+  -webkit-animation: slide_top 0.5s ease-in;
+          animation: slide_top 0.5s ease-in;
 }
 
 .comics_create .container-sm,

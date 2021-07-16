@@ -1,16 +1,7 @@
 .comics_create, .comics_edit{
     z-index: -1;
     color: $primary_color;
-    animation: slide .5s ease-in;
-
-    @keyframes slide {
-        from{
-            transform: translateY(-1100px);
-        }
-        to{
-            transform: translateY(0);
-        }
-    }
+    animation: slide_top .5s ease-in;
     
     .container-sm{
         background-color: $second_color;
