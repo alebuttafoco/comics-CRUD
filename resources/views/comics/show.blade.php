@@ -12,20 +12,7 @@
     <div class="details">
         <h2 class="comic_title"> {{$comic->title}} </h2>
         <p class="description"> {{$comic->description}} </p>
-        <span class="price"> {{$comic->price}} € </span>
-    </div>
-        
-    <div class="buttons">
-
-        <form onclick="return confirm('Sei sicuro di voler eliminare questo elemento?')" action=" {{route('comics.destroy', $comic->id)}} " method="post">
-            @csrf
-            @method('DELETE')
-            
-            <button  class="delete" type="submit">Delete</button>
-        </form>
-
-        <a href=" {{route('comics.edit', $comic->id)}} "><button class="m-t">Edit</button></a>
-
+        <span class="btn btn-price"> {{$comic->price}} € </span>
     </div>
     
 </div>
