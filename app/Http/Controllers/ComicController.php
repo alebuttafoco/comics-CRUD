@@ -36,14 +36,13 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->request);
-        $newComic = new Comic();
-        $newComic->path = $request->path;
-        $newComic->title = $request->title;
-        $newComic->description = $request->description;
-        $newComic->price = $request->price;
-        $newComic->save(); //IMPORTANTE
-
+        $validated = $request->validate([
+            'path' => 'nullable',
+            'title' => 'required | min:3 | max:100',
+            'description' => 'nullable',
+            'price' => 'nullable',
+        ]);
+        Comic::create($validated);
         return redirect()->route('comics.index'); // ritorna alla pagina principale di comics
     }
 
@@ -78,8 +77,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //dd($request->request);
-        $comic->update($request->all());
+        $validated = $request->validate([
+            'path' => 'nullable',
+            'title' => 'required | min:3 | max:100',
+            'description' => 'nullable',
+            'price' => 'nullable',
+        ]);
+        Comic::create($validated);
+
+        $comic->update($validated);
         return redirect()->route('comics.show', $comic->id);
     }
 
