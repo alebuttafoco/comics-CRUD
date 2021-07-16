@@ -1,0 +1,44 @@
+.admin {
+    background-color: $dark_color;
+
+    & > .container {
+        background-color: $second_color;
+        padding: 30px;
+    }
+
+    table{
+        
+        thead {
+            th {
+                font-size: 1.5rem;
+                color: $primary_color;
+                padding-bottom: 1rem;
+                border-bottom: 5px solid $primary_color;
+            }
+        }
+        tbody {
+            td {
+                padding: 1rem;
+                border-bottom: 3px solid $dark_color;
+                
+            }
+            .td_title {
+                font-weight: bold;
+                width: 20%;
+                text-align: center;
+            }
+            .td_description {
+                width: 50%;
+            }
+            .td_price {
+                margin-top: 140px;
+                width: 100px;
+                border-bottom: none;
+            }
+            .td_options {
+                border-bottom: none;
+            }
+        }
+    }
+
+}
