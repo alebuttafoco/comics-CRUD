@@ -79,3 +79,15 @@ input{
     color: $second_color;
     padding: 15px 0;
 }
+
+// ALERT ERRORS
+.alert {
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid rgb(185, 69, 69);
+    font-size: 1.6rem;
+}
+
+.alert-danger {
+    color: rgb(185, 69, 69);
+}

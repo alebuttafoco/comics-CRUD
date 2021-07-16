@@ -83,6 +83,17 @@ input {
   padding: 15px 0;
 }
 
+.alert {
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #b94545;
+  font-size: 1.6rem;
+}
+
+.alert-danger {
+  color: #b94545;
+}
+
 header {
   background-color: #4087dd;
   position: sticky;
