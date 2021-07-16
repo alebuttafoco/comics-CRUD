@@ -21,7 +21,7 @@
             @csrf
             @method('DELETE')
             
-            <button id="app" class="delete" type="submit" @click='alert' >Delete</button>
+            <button  class="delete" type="submit">Delete</button>
         </form>
 
         <a href=" {{route('comics.edit', $comic->id)}} "><button class="m-t">Edit</button></a>

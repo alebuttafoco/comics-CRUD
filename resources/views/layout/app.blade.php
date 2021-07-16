@@ -18,10 +18,5 @@
         @yield('content')
     </main>
 
-    {{-- VUE --}}
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    {{-- JS --}}
-    <script src=" {{asset('js/app.js')}} "></script>
-
 </body>
 </html>
