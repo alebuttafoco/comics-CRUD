@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('title', 'CREATE')
 @section('content')
 
 <div class="comics_create">

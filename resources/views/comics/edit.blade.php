@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('title', 'EDIT | ' . $comic->title)
 @section('content')
 
 <div class="comics_edit">

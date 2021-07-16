@@ -6,5 +6,15 @@ header {
 }
 
 nav {
-    padding: 20px 0;
+    a{
+        border-bottom: 5px solid transparent;
+        padding: 20px;
+        &:hover{
+            border-bottom: 5px solid $second_color;
+        }
+    }
+}
+
+.active_link {
+    border-bottom: 5px solid $second_color;
 }
