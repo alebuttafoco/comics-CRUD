@@ -10,8 +10,8 @@
 
 
      <div class="container-sm">
-        {{-- errors --}}
-        @if ($errors->any())
+        {{-- MOSTRA ERRORE --}}
+        {{-- @if ($errors->any())
         <div class="alert alert-danger">
           <ul>
             @foreach ($errors->all() as $error)
@@ -19,7 +19,7 @@
             @endforeach
           </ul>
         </div>
-        @endif 
+        @endif  --}}
  
         {{-- FORM --}}
         <form action=" {{route('comics.store')}} " method="POST">
@@ -35,6 +35,15 @@
                 <label for="title">Titolo</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="inserisci il titolo">
             </div>
+            {{-- ----------------------------------------------------------------------------------------------------------------
+            MOSTRA ERRORE 
+            ----------------------------------------------------------------------------------------------------------------------}}
+            @error('title')
+            <div class="alert alert-danger"><i class="fas fa-arrow-alt-circle-up alert-danger"></i> {{ $message }}</div>
+            @enderror
+            {{-- ----------------------------------------------------------------------------------------------------------------
+            / MOSTRA ERRORE 
+            ----------------------------------------------------------------------------------------------------------------------}}
 
             {{-- description --}}
             <div class="form-group">

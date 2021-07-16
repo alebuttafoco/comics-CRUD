@@ -82,12 +82,21 @@ input{
 
 // ALERT ERRORS
 .alert {
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
-    border: 1px solid rgb(185, 69, 69);
-    font-size: 1.6rem;
+    background-color: rgb(231, 142, 133);
+    font-size: .9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .alert-danger {
-    color: rgb(185, 69, 69);
+    color: rgb(160, 63, 63);
+}
+
+.fas{
+    font-size: 2rem;
+    margin-right: 15px;
 }

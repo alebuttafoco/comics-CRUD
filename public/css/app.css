@@ -84,14 +84,23 @@ input {
 }
 
 .alert {
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
-  border: 1px solid #b94545;
-  font-size: 1.6rem;
+  background-color: #e78e85;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .alert-danger {
-  color: #b94545;
+  color: #a03f3f;
+}
+
+.fas {
+  font-size: 2rem;
+  margin-right: 15px;
 }
 
 header {
