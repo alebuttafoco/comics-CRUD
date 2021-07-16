@@ -83,8 +83,6 @@ class ComicController extends Controller
             'description' => 'nullable',
             'price' => 'nullable',
         ]);
-        Comic::create($validated);
-
         $comic->update($validated);
         return redirect()->route('comics.show', $comic->id);
     }
