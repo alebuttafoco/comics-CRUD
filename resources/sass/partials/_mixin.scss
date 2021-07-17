@@ -14,3 +14,16 @@
 @mixin boing {
     animation: boing 1s ease-in-out;
 }
+
+// scrollbar
+@mixin scrollbar-track {
+    background-color: $darker_color;
+}
+@mixin scrollbar-thumb {
+    background-color: $primary_color;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: $primaryDark_color;
+    }
+}

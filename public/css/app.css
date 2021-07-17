@@ -134,6 +134,23 @@ textarea {
   margin-right: 15px;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0282f9;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #0269c9;
+}
+
 @-webkit-keyframes slide_top {
   from {
     transform: translateY(-1100px);
@@ -321,7 +338,6 @@ nav a:hover {
 
 .comics .cards {
   display: flex;
-  justify-content: center;
   padding-top: 100px;
   padding-bottom: 15px;
   overflow: auto;
@@ -343,10 +359,27 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+.cards::-webkit-scrollbar {
+  height: 7px;
+}
+
+.cards::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: #0282f9;
+  border-radius: 50px;
+}
+
+.cards::-webkit-scrollbar-thumb:hover {
+  background-color: #0269c9;
+}
+
 .comic {
   display: flex;
   position: relative;
-  margin-top: 10%;
+  margin-top: 100px;
   background-color: #fff;
   -webkit-animation: zoom_out 0.5s;
           animation: zoom_out 0.5s;

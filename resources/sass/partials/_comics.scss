@@ -1,15 +1,9 @@
 .comics{
-
-
-
     .cards{
         display: flex;
-        //flex-wrap: wrap;
-        justify-content: center;
         padding-top: 100px;
         padding-bottom: 15px;
         overflow:auto;
-        
         
         .card{
             // animation
@@ -27,4 +21,17 @@
             }
         }
     }
+}
+
+// scrollbar style
+.cards::-webkit-scrollbar {
+    height: 7px;
+}
+
+.cards::-webkit-scrollbar-track {
+    @include scrollbar-track;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    @include scrollbar-thumb;
 }
