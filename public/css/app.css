@@ -22,14 +22,26 @@ body {
   background-color: #353535;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  font-size: 1.5rem;
+  border-left: 5px solid #0282f9;
 }
 
-.container-sm {
-  width: 50%;
-  margin: auto;
+button {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.2rem;
+  border-style: none;
+}
+
+input {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+  height: 20px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 a {
@@ -43,6 +55,22 @@ a:not(:last-child) {
   margin-right: 50px;
 }
 
+textarea {
+  font-family: "Titillium Web", sans-serif;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container-sm {
+  width: 50%;
+  margin: auto;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -50,7 +78,7 @@ a:not(:last-child) {
   width: 120px;
   height: 50px;
   background-color: #353535;
-  color: white;
+  color: #fff;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -77,46 +105,6 @@ a:not(:last-child) {
   background-color: #0282f9;
 }
 
-.fa-plus {
-  padding: 15px 17px;
-  border-radius: 50%;
-  background-color: #0282f9;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  -webkit-animation: show 1s linear;
-          animation: show 1s linear;
-}
-
-.fa-plus:hover {
-  transform: scale(1.05);
-  background-color: #0269c9;
-}
-
-.form-group {
-  margin: 30px 0;
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group input {
-  height: 20px;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-button {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1.2rem;
-  border-style: none;
-}
-
-input {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1rem;
-}
-
 .section_title {
   background-color: #1c1c1c;
   color: #fff;
@@ -129,7 +117,6 @@ input {
 .alert {
   padding: 1rem;
   width: 100%;
-  background-color: #e78e85;
   font-size: 0.9rem;
   font-weight: bold;
   border-radius: 5px;
@@ -138,7 +125,8 @@ input {
 }
 
 .alert-danger {
-  color: #a03f3f;
+  border: 1px solid #b82525;
+  color: #b82525;
 }
 
 .fas {
@@ -194,28 +182,84 @@ input {
   }
 }
 
-@-webkit-keyframes show {
+@-webkit-keyframes zoom_out {
   from {
     opacity: 0;
+    transform: scale(1.5);
   }
 
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
-@keyframes show {
+@keyframes zoom_out {
   from {
     opacity: 0;
+    transform: scale(1.5);
   }
 
   to {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes boing {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes boing {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
 .admin {
   background-color: #353535;
+}
+
+.admin .fa-plus {
+  padding: 15px 17px;
+  border-radius: 50%;
+  background-color: #0282f9;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-animation: boing 1s ease-in-out;
+          animation: boing 1s ease-in-out;
+}
+
+.admin .fa-plus:hover {
+  transform: scale(1.05);
+  background-color: #0269c9;
 }
 
 .admin > .container {
@@ -276,15 +320,14 @@ nav a:hover {
 }
 
 .comics .cards {
-  padding: 50px 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  -webkit-animation: slide_left 0.7s linear;
-          animation: slide_left 0.7s linear;
+  padding: 50px 0;
 }
 
 .comics .cards .card {
+  -webkit-animation: slide_left 0.5s ease-in;
+          animation: slide_left 0.5s ease-in;
   margin: 15px;
 }
 
@@ -301,10 +344,12 @@ nav a:hover {
 }
 
 .comic {
+  display: flex;
+  position: relative;
   margin-top: 10%;
   background-color: #fff;
-  position: relative;
-  display: flex;
+  -webkit-animation: zoom_out 0.5s;
+          animation: zoom_out 0.5s;
 }
 
 .comic .path {
@@ -336,13 +381,6 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
-.comic .buttons {
-  position: absolute;
-  top: 50%;
-  right: -120px;
-  transform: translateY(-50%);
-}
-
 .comics_create,
 .comics_edit {
   z-index: -1;
@@ -357,17 +395,5 @@ nav a:hover {
   padding: 50px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-}
-
-.comics_create .form-group,
-.comics_edit .form-group {
-  border-left: 5px solid #0282f9;
-}
-
-.comics_create textarea,
-.comics_edit textarea {
-  font-family: "Titillium Web", sans-serif;
-  padding: 15px;
-  font-size: 1rem;
 }
 

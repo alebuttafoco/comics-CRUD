@@ -12,17 +12,34 @@
     from{
         transform: translateX(-500px);
         opacity: 0;
+
     }
     to{
         transform: translateX(0);
         opacity: 1;
     }
 }
-@keyframes show {
+@keyframes zoom_out {
     from{
         opacity: 0;
+        transform: scale(1.5);
     }
     to{
         opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes boing {
+    0%{
+        transform: translateY(-200px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
     }
 }

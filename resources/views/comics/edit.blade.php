@@ -48,12 +48,10 @@
                 <label for="price">Prezzo</label>
                 <input type="number" name="price" step="0.01" id="price" class="form-control" value="{{$comic->price}}">
             </div>
-        
-
+            
             <button class="btn" type="submit">Submit</button>
         
         </form>
-        
 
     </div>
 </div>

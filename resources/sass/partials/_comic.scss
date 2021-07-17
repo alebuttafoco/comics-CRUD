@@ -1,8 +1,11 @@
 .comic {
+    display: flex;
+    position: relative;
     margin-top: 10%;
     background-color: $second_color;
-    position: relative;
-    display: flex;
+
+    //animation
+    @include zoom_out;
 
     .path {
         height: 600px;
@@ -31,12 +34,5 @@
             line-height: 2rem;
             margin-bottom: 50px;
         }
-    }
-
-    .buttons {
-        position: absolute;
-        top: 50%;
-        right: -120px;
-        transform: translateY(-50%);
     }
 }

@@ -1,4 +1,22 @@
 .admin {
+    // icon: create new item 
+    .fa-plus {
+        padding: 15px 17px;
+        border-radius: 50%;
+        background-color: $primary_color;
+        position:fixed;
+        bottom: 30px;
+        right: 30px;
+
+        //animation
+        @include boing;
+    
+        &:hover {
+            transform: scale(1.05);
+            background-color: $primaryDark_color;
+    
+        }
+    }
     background-color: $dark_color;
 
     & > .container {

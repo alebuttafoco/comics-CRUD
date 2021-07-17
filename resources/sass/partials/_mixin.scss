@@ -1,0 +1,16 @@
+// animation
+@mixin slide_top {
+    animation: slide_top .5s ease-in;
+}
+
+@mixin slide_left {
+    animation: slide_left .5s ease-in;
+}
+
+@mixin zoom_out {
+    animation: zoom_out .5s;
+}
+
+@mixin boing {
+    animation: boing 1s ease-in-out;
+}
