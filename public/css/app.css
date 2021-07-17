@@ -322,7 +322,9 @@ nav a:hover {
 .comics .cards {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding-top: 100px;
+  padding-bottom: 15px;
+  overflow: auto;
 }
 
 .comics .cards .card {
@@ -332,15 +334,13 @@ nav a:hover {
 }
 
 .comics .cards .card img {
-  width: 250px;
+  width: 300px;
   position: relative;
-  box-shadow: 1px 5px 10px #1c1c1c;
   transition: 0.3s;
 }
 
 .comics .cards .card img:hover {
-  padding: 5px;
-  border: 5px solid #0282f9;
+  transform: scale(1.1);
 }
 
 .comic {

@@ -19378,7 +19378,18 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // IMPLEMENTA LO GRAB-SCROLLING
+
+
+var app = new Vue({
+  'el': '#app',
+  'data': {},
+  'methods': {
+    scroll: function scroll() {
+      console.log('scroll');
+    }
+  }
+});
 
 /***/ }),
 

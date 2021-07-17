@@ -1,10 +1,15 @@
 .comics{
+
+
+
     .cards{
         display: flex;
         //flex-wrap: wrap;
         justify-content: center;
-        padding: 50px 0;
-
+        padding-top: 100px;
+        padding-bottom: 15px;
+        overflow:auto;
+        
         
         .card{
             // animation
@@ -12,14 +17,12 @@
             margin: 15px;
             
             img {
-                width: 250px;
+                width: 300px;
                 position: relative;
-                box-shadow: $shadow;
                 transition:.3s;
                 
                 &:hover{
-                    padding: 5px;
-                    border: 5px solid $primary_color;
+                    transform: scale(1.1);
                 }
             }
         }
