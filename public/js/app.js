@@ -19381,14 +19381,10 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // IMPLEMENTA LO GRAB-SCROLLING
 
 
-var app = new Vue({
-  'el': '#app',
-  'data': {},
-  'methods': {
-    scroll: function scroll() {
-      console.log('scroll');
-    }
-  }
+var scrollContainer = document.querySelector(".cards");
+scrollContainer.addEventListener("wheel", function (evt) {
+  evt.preventDefault();
+  scrollContainer.scrollLeft += evt.deltaY;
 });
 
 /***/ }),

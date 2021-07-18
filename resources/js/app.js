@@ -1,15 +1,8 @@
 require('./bootstrap');
 
 // IMPLEMENTA LO GRAB-SCROLLING
-const app = new Vue({
-    'el': '#app',
-
-    'data': {
-    },
-
-    'methods' : {
-        scroll(){
-            console.log('scroll');
-        }
-    }
-})
+const scrollContainer = document.querySelector(".cards");
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});

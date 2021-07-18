@@ -340,7 +340,7 @@ nav a:hover {
   display: flex;
   padding-top: 100px;
   padding-bottom: 15px;
-  overflow: auto;
+  overflow-x: scroll;
 }
 
 .comics .cards .card {
